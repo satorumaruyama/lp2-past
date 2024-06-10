@@ -1,4 +1,5 @@
 $pc:768px;
+$tab:1200px;
 
 @mixin mq($bp) {
     @media screen and (min-width: $bp) {
