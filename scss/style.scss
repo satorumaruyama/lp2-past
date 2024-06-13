@@ -7,87 +7,99 @@ body {
     .mainVisual {
         position: relative;
         background-image: url('../images/mainVisual_sp.png');
-        background-size: cover;
         background-repeat: no-repeat;
+        background-size: contain;
         aspect-ratio: 390 / 450;
         @include mq($pc) {
             background-image: url('../images/mainVisual_pc.png');
+            background-size: cover;
             aspect-ratio: 1500 / 720;
         }
+        &__container {
+            margin: 0 auto;
+            @include mq($pc) {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
         &__title {
-            position: absolute;
-            top: 1.25rem;
-            left: 50%;
-            transform: translateX(-50%);
+            margin: 0 auto;
             font-family: Marcellus;
             font-weight: normal;
             font-size: 1.5rem;
-            letter-spacing: 0.2687rem;
+            letter-spacing: 0.2em;
             text-align: center;
             color: #000;
+            padding-top: 5.3vw;
             @include mq($pc) {
                 font-size: 1.875rem;
-                top: 1.75rem;
+                padding-top: 1.8vw;
+                letter-spacing: 0.15em;
             }
         }
         &__productName {
-            max-width: 75rem;
-            position: absolute;
-            z-index: 1;
-            top: 26.5rem;
+            margin: 0 auto;
             font-family: Marcellus;
             font-weight: normal;
             font-size: 2.5625rem;
             letter-spacing: 0.3em;
             color: #000;
-            padding-left: 1.375rem;
-            line-height: 2.8125rem;
+            padding-left: 5.6vw;
+            // line-height: 47px;
+            line-height: 12vw;
+            padding-top: 93.8vw;
             @include mq($pc) {
-                top: 17.3125rem;
-                left: 12.5rem;
+                max-width: 1200px;
                 font-size: 3.125rem;
-                line-height: 3.875rem;
+                line-height: 63.5px;
+                padding-top: 13.4vw;
+                padding-left: 4.7vw;
             }
         }
         &__productName-serif {
-            position: absolute;
-            width: 18.25rem;
-            top: 0.8125rem;
-            padding-top: 5.125rem;
-            padding-left: 0.0625rem;
+            width: 74.8vw;
+            padding-top: 0.7vw;
+            padding-left: 0.2vw;
             font-family: "Noto Serif JP";
             font-weight: normal;
             font-size: 1.25rem;
             letter-spacing: 0.3em;
             color: #000;
             @include mq($pc) {
-                width: 23.9375rem;
-                top: 2.625rem;
-                left:1.375rem;
+                max-width: 1200px;
                 font-size: 1.5625rem;
+                padding-top: 0;
             }
         }
     }
 
     .purchase {
-        width: 22.375rem;
         text-align: center;
-        margin: 9.8125rem auto 3.25rem;
-        background-color: #F0F4FF;
-        padding: 1.25rem 1.875rem 0.75rem;
+        margin: 0 auto;
+        position: relative;
         @include mq($pc) {
-            width: 62.5rem;
             display: flex;
-            margin-top: 3rem;
-            margin-bottom: 3.0625rem;
-            padding-bottom: 1.5625rem;
             text-align: left;
+        }
+        &__container { 
+            width: 91.7vw;
+            background-color: #F0F4FF;
+            margin: 10.7vw auto 12.8vw;
+            padding: 5.1vw 7.6vw 3vw;
+            @include mq($pc) {
+                max-width: 1000px;
+                display: flex;
+                justify-content: space-between;
+                margin: 3.2vw auto;
+                padding: 0;
+            }
         }
         &__contents {
             @include mq($pc) {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            padding-left: 2vw;
             }
         }
         &__title {
@@ -101,7 +113,6 @@ body {
                 font-size: 1.5rem;
                 text-align: left;
                 padding-left: 1.0625rem;
-                padding-top: 0.125rem;
 
             }
         }
@@ -119,26 +130,39 @@ body {
         }
         &__list {
             @include mq($pc) {
+                width: 47vw;
                 display: flex;
-                justify-content: space-between;
-                width: 44.375rem;
-                padding-left: 2.875rem;
-                padding-top: 0.1875rem;
+                padding-top: 0.4vw;
+                padding-bottom: 2.8vw;
             }
         }
         &__item {
             display: flex;
-            width: 18.75rem;
-            height: 3.5625rem;
-            border-radius: 1.8125rem;
-            margin: 1.375rem auto;
-            align-items: center;
+            width: 76.9vw;
+            height: 14.6vw;
+            border-radius: 7.4vw;
+            margin: 5.6vw auto;
             justify-content: center;
-            padding-top: 0.3125rem;
             font-family: "Noto Serif JP";
             font-weight: 600;
             font-size: 1.125rem;
             color: #fff;
+            white-space: nowrap;
+            align-items: center;
+            @include mq($pc) {
+                width: 20vw;
+                height: 3.8vw;
+                margin: 0;
+                margin-top: 2.7vw;
+                margin-left: 1.7vw;
+            }
+        }  
+        &__item:last-child {
+            @include mq($pc) {
+                padding-left: 0.8vw;
+                margin-right: 54px;
+                margin-left: 34px;
+            }
         }  
         &__item-blue {
             background-color: #46C4DB;
@@ -159,10 +183,13 @@ body {
             aspect-ratio: 1500 / 550;
         }
         &__container {
+            width: 91.7vw;
+            margin: 0 auto;
             @include mq($pc) {
                 position: absolute;
-                top: 4.9375rem;
-                right: 15.5rem;
+                width: 44.1vw;
+                top: 9vw;
+                left: 55.2vw;
             }
         }
         &__title {
@@ -172,12 +199,13 @@ body {
             line-height: 1.875rem;
             text-align: center;
             color: #fff;
-            padding-top: 53px;
+            padding-top: 13.5vw;
             @include mq($pc) {
                 font-size: 2.375rem;
                 line-height: 2.375rem;
                 text-align: left;
                 color: #fff;
+                padding-top: 0;
                 
             }
         }
@@ -188,18 +216,18 @@ body {
             line-height: 1.5rem;
             text-align: center;
             color: #fff;
-            padding-top: 1.0625rem;
+            padding-top: 4.8vw;
             @include mq($pc) {
                 font-size: 1.5rem;
                 line-height: 1.5rem;
                 text-align: left;
                 color: #fff;
+                padding-top: 1.1vw;
                 
             }
             
         }
         &__text {
-            width: 22.375rem;
             margin: 0 auto;
             font-family: "Noto Serif JP";
             font-weight: normal;
@@ -208,11 +236,11 @@ body {
             text-align: left;
             color: #fff;
             text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-            padding-top: 1.125rem;
+            padding-top: 4.8vw;
             @include mq($pc) {
-                width: 26.375rem;
+                width: 28.1vw;
                 margin: 0;
-                padding-top: 1.5rem;
+                padding-top: 1.6vw;
                 
             }
             
@@ -220,52 +248,61 @@ body {
     }
 
     .voice {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 19.2vw;
+        @include mq($pc) {
+            padding-bottom: 7.6vw;
+        }
         &__container {
+            width: 72.5vw;
             margin: 0 auto;
             @include mq($pc) {
-                width: 62.5rem;
-                padding-top: 3.0625rem;
+                width: 65.3vw;
+                margin: 0 auto;
+                padding-top: 0.2vw;
             }
         }
         &__title {
             font-family: "EB Garamond";
             font-weight: bold;
-            font-size: 30px;
+            font-size: 1.875rem;
             letter-spacing: 0.05em;
-            line-height: 32px;
+            line-height: 2rem;
             text-align: center;
             color: #000;
-            padding-top: 53px;            
+            padding-top: 14.3vw;            
             @include mq($pc) {
-                font-size: 45px;
+                font-size: 2.8125rem;
                 letter-spacing: 0.05em;
-                line-height: 32px;
+                line-height: 2rem;
                 text-align: center;
                 color: #000;
-                padding-top: 41px;
+                padding-top: 6.2vw;
             }
         }
         &__titleSerif {
             font-family: "Noto Serif JP";
             font-weight: 600;
-            font-size: 16px;
+            font-size: 1rem;
             letter-spacing: 0.05em;
-            line-height: 32px;
+            line-height: 2rem;
             text-align: center;
             color: #000;
-            padding-top: 2px;
+            padding-top: 0.5vw;
             @include mq($pc) {
-                font-size: 20px;
+                font-size: 1.25rem;
                 letter-spacing: 0.05em;
-                line-height: 32px;
+                line-height: 2rem;
                 text-align: center;
                 color: #000;
-                padding-top: 20px;
+                padding-top: 1.3vw;
             }
         }
         &__list {
+            padding-top: 8.2vw;
             @include mq($pc) {
-                width: 980px;
+                width: 65.3vw;
                 display: flex;
                 justify-content: space-between;
                 padding-top: 1.5rem;
@@ -273,74 +310,330 @@ body {
             }
         }
         &__carousel {
-            width: 280px;
-            aspect-ratio: 280 / 344;
+            width: 71.7vw;
             background-color: #DBF7F9;
             margin: 0 auto;
             @include mq($pc) {
-                width: 300px;
-                aspect-ratio: 300 / 388;
                 margin: 0;
-                margin-top: 13px;
+                margin-top: 0.8vw;
             }
         }
-        &__carouselImageSp {
-            display: flex;
-            margin: 31px auto 0;
-            padding-top: 29px;
-            padding-left: 9px;
+        .swiper-slide {
+            aspect-ratio: 280 / 340;
             @include mq($pc) {
-                display: none;
+                aspect-ratio: 300 / 382;
             }
         }
         &__carouselImagePc {
-            display: none;
+            display: flex;
+            width: 33%;
+            margin: 6.4vw auto 0;
+            padding-top: 1vw;
+            padding-left: 3.3vw;
             @include mq($pc) {  
                 display: flex;
-                margin: 31px auto 0;
-                padding-top: 10px;
+                margin: 2vw auto 0;
+                padding-top: 0.4vw;
                 padding-left: 0;
             }
         }
         &__carouselName {
             font-family: "Noto Serif JP";
             font-weight: normal;
-            font-size: 14px;
+            font-size: 0.875rem;
             letter-spacing: 0.05em;
-            line-height: 32px;
+            line-height: 2rem;
             text-align: center;
             color: #000;
-            padding-top: 2px;
-            padding-left: 1px;
+            padding-top: 0.5vw;
+            padding-left: 0.7vw;
             @include mq($pc) {
-                font-size: 15px;
+                font-size: 0.9375rem;
                 letter-spacing: 0.05em;
-                line-height: 32px;
+                line-height: 2rem;
                 text-align: center;
                 color: #000;
+                padding-top: 0.2vw;
+                padding-left: 0;
                 
             }       
         }
         &__carouselText {
             font-family: "Noto Serif JP";
             font-weight: normal;
-            font-size: 14px;
-            line-height: 28px;
+            font-size: 0.875rem;
+            line-height: 1.75rem;
             text-align: left;
             color: #000;
-            width: 263px;
-            padding-top: 9px;
-            padding-left: 13px;
-            line-height: 28px;
+            width: 64.1vw;
+            padding-top: 2.5vw;
+            margin: 0 auto;
             @include mq($pc) {
-                font-size: 16px;
-                line-height: 28px;
+                font-size: 1rem;
+                line-height: 1.75rem;
                 text-align: left;
                 color: #000;
-                width: 272px;
-                padding-left: 16px;
-                
+                width: 17.9vw;
+                padding-left: 0;
+                padding-top: 0.4vw;     
+            }
+        }
+        .swiper-pagination {
+            position: absolute;
+            bottom: 12.3vw;
+            @include mq($pc) {
+                bottom: 5.2vw;
+            }
+        }
+        .swiper-button-prev {
+            font-size: 2.0625rem;
+            position: absolute;
+            top: 57%;
+            left: 4%;
+            color: #00AFBF;
+            @include mq($pc) {
+                font-size: 3rem;
+                top: 63%;
+                left: 11.5%;
+            }
+        }
+        .swiper-button-prev:after {
+            display: none;
+        }
+        .swiper-button-next {
+            font-size: 2.0625rem;
+            position: absolute;
+            top: 57%;
+            right: 5.5%;
+            color: #00AFBF;
+            @include mq($pc) {
+                font-size: 3rem;
+                top: 63%;
+                right: 12.9%;
+            }
+        }
+        .swiper-button-next:after {
+            display: none;
+        }
+
+    }
+
+    .faq {
+        margin: 0 auto;
+        padding-bottom: 8.2vw;
+        background: linear-gradient(#f4ffe8 0%, #c6f0fe 100%);
+        &__title {
+            font-family: "EB Garamond";
+            font-weight: bold;
+            font-size: 1.875rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 9.4vw;            
+            @include mq($pc) {
+                font-size: 2.8125rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 3.4vw;
+            }
+        }
+        &__titleSerif {
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 0.5vw;
+            @include mq($pc) {
+                font-size: 1.25rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 1.3vw;
+            }
+        }
+        &__container {
+            width: 91.7vw;
+            margin: 8.4vw auto;
+            @include mq($pc) {
+                width: 40vw;
+                margin: 0 auto;
+                padding-top: 2.6vw;
+            }
+        }
+        &__list {
+            background-color: #ffffff;
+            font-family: "Noto Serif JP";
+            font-weight: 500;
+            font-size: 0.9375rem;
+            line-height: 1.75rem;
+            text-align: left;
+            color: #444;
+            margin: 0 auto 5.3vw;
+        }
+        &__question::before {
+            content: "Q.";
+            font-family: "EB Garamond";
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: left;
+            color: #444;
+            padding-right: 4.3vw;
+        }
+        &__question {
+            width: 83.3vw;
+            margin: 0 auto;
+            display: flex;
+            padding-top: 4.3vw;
+            padding-bottom: 3.3vw;
+            position: relative;
+            @include mq($pc) {
+                width: 36.7vw;
+                padding-top: 1.4vw;
+            }
+        }
+        &__question::after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0d7';
+            font-weight: 900;
+            position:absolute;
+            top: 22%;
+            right: 0;
+        }
+        &__question.activate::after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0d8';
+            font-weight: 900;
+            position:absolute;
+            top: 22%;
+            right: 0;
+        }
+        &__answer::before {
+            content: "A.";
+            font-family: "EB Garamond";
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 2rem;
+            text-align: left;
+            color: #444;
+            padding-right: 6.1vw;
+            @include mq($pc) {
+                padding-left: 0.2vw;
+            }
+        }
+        &__answer {
+            display: flex;
+            width: 83.3vw;
+            margin: 0 auto;
+            font-family: "Noto Serif JP";
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: -0.06em;
+            line-height: 1.75rem;
+            text-align: left;
+            color: #000;
+            padding-bottom: 7.4vw;
+            @include mq($pc) {
+                width: 36.7vw;
+                padding-top: 0.1vw;
+                padding-bottom: 1.4vw;
             }
         }
     }
+
+    .footer {
+        background-color: #0071CE;
+        aspect-ratio: 390 /165;
+        @include mq($pc) {
+            aspect-ratio: 1500 / 104;
+        }
+        &__container {
+            @include mq($pc) {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                padding-top: 1.7vw;
+            }
+        }
+        &__title  {
+            font-family: Marcellus;
+            font-weight: normal;
+            font-size: 1.75rem;
+            letter-spacing: 0.2em;
+            color: #fff;
+            text-align: center;
+            padding-top: 6.1vw;
+            @include mq($pc) {
+                width: 29.6vw;
+                font-family: Marcellus;
+                font-weight: normal;
+                font-size: 2rem;
+                letter-spacing: 0.2em;
+                text-align: center;
+                color: #fff;
+                padding-top: 0;
+                padding-left: 2.1vw;
+                
+            }
+        }
+        &__nav {
+            width: 76.9vw;
+            margin: 0 auto;
+            @include mq($pc) {
+                width: 22.9vw;
+                margin: 0;
+            }
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 6.1vw;
+            @include mq($pc) {
+                padding-top: 0;
+                line-height: 3.5em;
+            }
+        }
+        &__item {
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.75rem;
+            text-align: left;
+            color: #fff;
+            @include mq($pc) {
+                font-family: "Noto Serif JP";
+                font-weight: normal;
+                font-size: 0.875rem;
+                text-align: center;
+                color: #fff;
+                
+                
+            }
+        }
+        &__copyright {
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.6875rem;
+            text-align: center;
+            color: #fff;
+            padding-top:6.4vw;
+            @include mq($pc) {
+                font-family: "Noto Serif JP";
+                font-weight: normal;
+                font-size: 0.75rem;
+                text-align: center;
+                color: #fff;   
+                padding-top: 1.5vw;
+                padding-left: 4.8vw;   
+            }
+        }
+
+    } 
 }
